@@ -1,60 +1,57 @@
-# Workshop ETL Project
+# ETL Project Workshop
 
-## Descripción
+## Description
 
-Este proyecto consiste en un proceso ETL donde migramos datos, en este caso un dataset de candidatos desde un archivo CSV a una base de datos como lo es PostgreSQL,como ya el csv estaba limpio se tuvo encuenta la limpieza, se enfoco en las visualizaciones utilizando Python.
+This project consists of an ETL process where we migrate data, in this case a candidate dataset from a CSV file to a database such as PostgreSQL, since the csv was already clean, the cleaning was taken into account, focusing on the visualizations using Python.
 
-## Instalacion
+##Facility
 
-Clona este repositorio:
+Clone this repository:
 
 ```bash
 git clone https://github.com/willyoung21/Project_candidates.git
 cd Workshop_ETL1
 
-# crea y activa el entorno virtual
+# create and activate the virtual environment
 python -m venv .venv
 .venv\Scripts\activate
 
 
-#instala las dependencia
-pip install -r requirements.txt
+#install dependencies
+installing pip -r requirements.txt
 
 ```
 
-## Configuración de la base de datos
+## Database configuration
 
-1. Crear una base de datos PostgreSQL.
-2. Ejecutar el script `candidates.sql` que se encuentra en la carpeta `DB` para crear la tabla `candidates`.
-3. Importar el dataset que esta en la carpeta data `candidates.csv`
-4. Configurar el archivo `db_conexion.py` con las credenciales de tu base de datos.
+1. Create a PostgreSQL database.
+2. Run the `candidates.sql` script found in the `DB` folder to create the `candidates` table.
+3. Import the data set that is in the data `candidates.csv` folder
+4. Configure the `db_conexion.py` file with your database credentials.
 
-Ya configurada ejecuta el script para hacer la conexion
+Once configured, run the script to make the connection
 
 ```bash
-python src/db_conexion.py
+python src/db_connection.py
 ```
 
 ## USO
 
-Ejecuta el script de extracción de datos:
+Run the data extraction script:
 
 ```bash
 python src/extract.py
-#Esto generará un archivo candidates.csv en la carpeta data.
+#This will generate a candidates.csv file in the data folder.
 
-#Para generar las visualizaciones
-python src/visualizaciones.py
+#To generate the visualizations
+python src/visualizations.py
 
 ```
 
-## Visualizaciones
-Las visualizaciones generadas incluyen:
+## Views
+Visualizations generated include:
 
-Contrataciones por Tecnología (Gráfico Circular)
-Contrataciones por Año (Gráfico de Barras Horizontales)
-Contrataciones por Antigüedad (Gráfico de Barras)
-Contrataciones por País durante los años (Gráfico Multilínea)
-
-
-
+Hiring by Technology (Graphic Circular)
+Hires by Year (Horizontal Bar Chart)
+Hiring by Seniority (Bar Chart)
+Hiring by Country over the years (Multiline Chart)
