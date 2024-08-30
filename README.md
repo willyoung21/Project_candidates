@@ -66,6 +66,8 @@ Run the data extraction script:
 python src/extract.py
 #This will generate a candidates.csv file in the data folder.
 
+python src/eda.py
+
 #To generate the visualizations
 python src/visualizations.py
 
